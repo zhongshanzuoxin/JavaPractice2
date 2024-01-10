@@ -11,8 +11,11 @@
 <% List<TodoDTO> todoList = (List) request.getAttribute("todoList"); %>
 
 <% for(TodoDTO todo: todoList){ %>
-  <%=todo.getTodo() %> 期限:<%=todo.getTimeLimit() %><br>
+  <h5><%=todo.getTodo() %></h5>
+  <h6><%=todo.getTimeLimit() %></h6>
+  <a href="update-servlet?todoId=<%=todo.getId() %>">todoを更新する</a>
 <% } %>
+
 
 <form action="insert-servlet" method="post">
   <label>Todo: </label><input type="text" name="todo"><br>
