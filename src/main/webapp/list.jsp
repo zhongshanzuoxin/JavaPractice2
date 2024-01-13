@@ -14,6 +14,7 @@
   <h5><%=todo.getTodo() %></h5>
   <h6><%=todo.getTimeLimit() %></h6>
   <a href="update-servlet?todoId=<%=todo.getId() %>">todoを更新する</a>
+  <a href="delete-servlet?todoId=<%=todo.getId() %>">todoを削除する</a>
 <% } %>
 
 
